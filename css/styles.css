@@ -1,0 +1,51 @@
+/* ===== index.html styles ===== */
+
+.header-content-wrapper {
+  background-color: lightblue;
+  border: solid black 1px;
+  padding: 10px;
+}
+
+.links-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  background-color: lightyellow;
+  font-weight: bold;
+}
+
+.image-wrapper {
+  background-color: lightgrey;
+  padding: 10px;
+}
+
+img {
+  border-radius: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.student-links-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  background-color: lightgreen;
+  font-weight: bold;
+}
+
+/* ===== aboutMe.html styles ===== */
+.introduction-wrapper {
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.interests-wrapper {
+  background-color: lightyellow;
+  padding: 10px;
+}
+
+.fact-wrapper {
+  background-color: lightgrey;
+  padding: 10px;
+}
