@@ -11,6 +11,7 @@ class FormValidator{
         };
     }
 
+    //add event listeners to each field to validate format, and send email if validated
     validateOnSubmit(){
         let self = this
         console.log(self)
@@ -19,21 +20,16 @@ class FormValidator{
         this.form.addEventListener('submit', event => {
             event.preventDefault()
             let isFormValidFlag = true
-            console.log("flag is now true")
             self.fields.forEach(field => {
                 let input = document.getElementById(field.toString())
                 if(!self.validateFields(input)){
-                    console.log("flag is now false because", input.id, "is invalid")
                     isFormValidFlag = false
                 }else{
-                    console.log(self.formData)
                     self.extractFormData(input)
-                    console.log(self.formData)
                 }
             })
             if(isFormValidFlag){
-                console.log("going to send form because flag was never set to false")
-                emailjs.send('contact_service_id', 'contact_form', self.formData) //need to find what will replace 'this'
+                emailjs.send('contact_service_id', 'contact_form', self.formData)
                     .then(function() {
                         console.log('SUCCESS!');
                     }, function(error) {
@@ -43,6 +39,7 @@ class FormValidator{
         })
     }
 
+    //validate the format of each field
     validateFields(field){
         if(field.value.trim() === ""){
             field.parentElement.querySelector('.error-message').innerHTML = "Please do not leave anything blank"
@@ -73,6 +70,7 @@ class FormValidator{
         return true
     }
 
+    //put 'input' event listeners on each input field so that they restore to default design when changed
     defaultOnInput(){
         let self = this
         self.fields.forEach(field => {
@@ -84,11 +82,13 @@ class FormValidator{
         })
     }
 
+    //set default designs for input fields
     defaultFields(field){
         field.style.borderColor = "black"
         field.parentElement.querySelector('.error-message').innerHTML = ""
     }
 
+    //get the values from each input field to pass into email
     extractFormData(field){
         switch(field.id){
             case "user_fname":
