@@ -2,16 +2,44 @@ class FormValidator{
     constructor(form, fields){
         this.form = form;
         this.fields = fields;
+        this.formData = {
+            user_fname: "",
+            user_lname: "",
+            user_email: "",
+            user_phone: "",
+            user_message: "",
+        };
     }
 
     validateOnSubmit(){
         let self = this
+        console.log(self)
+        console.log(self.form)
+        console.log(self.fields)
         this.form.addEventListener('submit', event => {
             event.preventDefault()
+            let isFormValidFlag = true
+            console.log("flag is now true")
             self.fields.forEach(field => {
                 let input = document.getElementById(field.toString())
-                self.validateFields(input)
+                if(!self.validateFields(input)){
+                    console.log("flag is now false because", input.id, "is invalid")
+                    isFormValidFlag = false
+                }else{
+                    console.log(self.formData)
+                    self.extractFormData(input)
+                    console.log(self.formData)
+                }
             })
+            if(isFormValidFlag){
+                console.log("going to send form because flag was never set to false")
+                emailjs.send('contact_service_id', 'contact_form', self.formData) //need to find what will replace 'this'
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            }
         })
     }
 
@@ -19,6 +47,7 @@ class FormValidator{
         if(field.value.trim() === ""){
             field.parentElement.querySelector('.error-message').innerHTML = "Please do not leave anything blank"
             field.style.borderColor = "red"
+            return false
         } else{
             field.parentElement.querySelector('.error-message').innerHTML = ""
             field.style.borderColor = "black"
@@ -29,6 +58,7 @@ class FormValidator{
             if(!emailRegEx.test(field.value)){
                 field.parentElement.querySelector('.error-message').innerHTML = "Please enter a valid email address"
                 field.style.borderColor = "red"
+                return false
             }
         }
 
@@ -37,8 +67,10 @@ class FormValidator{
             if(!phoneRegEx.test(field.value)){
                 field.parentElement.querySelector('.error-message').innerHTML = "Please enter a valid phone number in the format: xxx-xxx-xxxx"
                 field.style.borderColor = "red"
+                return false
             }
         }
+        return true
     }
 
     defaultOnInput(){
@@ -56,25 +88,29 @@ class FormValidator{
         field.style.borderColor = "black"
         field.parentElement.querySelector('.error-message').innerHTML = ""
     }
+
+    extractFormData(field){
+        switch(field.id){
+            case "user_fname":
+                this.formData.user_fname = field.value
+                break;
+            case "user_lname":
+                this.formData.user_lname = field.value
+                break;
+            case "user_email":
+                this.formData.user_email = field.value
+                break;
+            case "user_phone":
+                this.formData.user_phone = field.value
+                break;
+            case "user_message":
+                this.formData.user_message = field.value
+                break;
+            default:
+                break;
+        }
+    }
 }
-// let validateFormOnSubmit = (event) => {
-//     event.preventDefault();
-//     let user_fname = document.getElementById("user_fname").value;
-//     let user_lname = document.getElementById("user_lname").value;
-//     let user_email = document.getElementById("user_email").value;
-//     let user_phone = document.getElementById("user_phone").value;
-//     let user_message = document.getElementById("user_message").value;
-//     // console.log("submit has been hit");
-//     console.log(user_fname);
-//     console.log(user_lname);
-//     console.log(user_email);
-//     console.log(user_phone);
-//     console.log(user_message);
-// };
-
-// let validateForm = (user_fname, user_lname, user_email, user_phone, user_message) => {
-
-// }
 
 //main driver function
 let main = () => {
