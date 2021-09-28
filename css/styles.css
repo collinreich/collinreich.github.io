@@ -1,4 +1,12 @@
+/* ===== global styles ===== */
+* {
+  box-sizing: border-box;
+}
+
 /* ===== index.html styles ===== */
+.page-wrapper {
+  padding: 10px;
+}
 
 .header-content-wrapper {
   background-color: lightblue;
@@ -48,4 +56,10 @@ img {
 .fact-wrapper {
   background-color: lightgrey;
   padding: 10px;
+}
+
+/* ===== contactMe.html styles ===== */
+.error-message {
+  font-size: 0.85rem;
+  color: red;
 }
