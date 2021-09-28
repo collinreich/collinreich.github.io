@@ -32,6 +32,7 @@ class FormValidator{
                 emailjs.send('contact_service_id', 'contact_form', self.formData)
                     .then(function() {
                         console.log('SUCCESS!');
+                        document.querySelector('.success-message').innerHTML = "Message Sent!"
                     }, function(error) {
                         console.log('FAILED...', error);
                     });
