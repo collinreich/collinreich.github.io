@@ -29,6 +29,17 @@
 					<a href="#portfolio" class="btn btn-outline-light">Portfolio</a>
 					<a href="#contact-form" class="btn btn-outline-light">Contact me</a>
 					<a href="/resources/resume.pdf" class="btn btn-outline-light" download="Collin Reich's resume"><i class="fas fa-file-download me-2"></i>Resume</a>
+					<div class="dropdown">
+						<a class="btn btn-outline-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+						  Class links
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+						  <li><a class="dropdown-item" href="https://mattm401.github.io/">Course website</a></li>
+						  <li><a class="dropdown-item" id="resume-visual">Resume visual</a></li>
+						  <li><a class="dropdown-item" href="https://rockc15.github.io/">Next student</a></li>
+						  <li><a class="dropdown-item" href="https://jrreap.github.io/">Previous student</a></li>
+						</ul>
+					</div>
 				</div>
 				<div class="image-wrapper">
 					<img src="/images/headshot.PNG" class="img-fluid rounded mx-auto d-block" alt="professional headshot">
@@ -51,33 +62,33 @@
 			<div class="container-fluid">
 				<h1 class="fw-light text-center my-4">Portfolio</h1>
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-md-4 d-flex align-items-stretch">
 						<div class="card mb-4 box-shadow">
-							<img src="/images/city.jpg" class="card-img-top" alt="...">
+							<img src="/images/sorting.PNG" class="card-img-top card-image border" alt="...">
 							<div class="card-body">
 								<h5 class="card-title">Sorting Algorithm Visualizer</h5>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<a href="#" class="btn btn-primary">Check it out</a>
+								<p class="card-text">Interactive visualizations for various sorting algorithms</p>
+								<a href="https://collinreich.github.io/Sorting-Algorithm-Visualizer-Project/" class="btn btn-primary">Check it out</a>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4 d-flex align-items-stretch">
 						<div class="card mb-4 box-shadow">
-							<img src="/images/city.jpg" class="card-img-top" alt="...">
+							<img src="/images/scatter.jpg" class="card-img-top card-image border" alt="...">
 							<div class="card-body">
 								<h5 class="card-title">Scattergories Web Application</h5>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<a href="#" class="btn btn-primary">Check it out</a>
+								<p class="card-text">A simple online version of the popular word game</p>
+								<a href="https://cpeg470-scattegories-a4955.web.app/" class="btn btn-primary">Check it out</a>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4 d-flex align-items-stretch">
 						<div class="card mb-4 box-shadow">
-							<img src="/images/city.jpg" class="card-img-top" alt="...">
+							<img src="/images/garden-pal-logo.png" class="card-img-top card-image border" alt="...">
 							<div class="card-body">
 								<h5 class="card-title">Garden Pal</h5>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<a href="#" class="btn btn-primary">Check it out</a>
+								<p class="card-text">A virtual landscaping tool designed to help avid gardeners organize their projects</p>
+								<a href="https://github.com/collinreich/Garden-Pal" class="btn btn-primary">Check it out</a>
 							</div>
 						</div>
 					</div>
@@ -88,40 +99,40 @@
 		<div class="container-fluid p-3 rounded" id="contact-container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h1 class="text-light fw-light m-0">Contact Me</h1>
+					<h1 class="text-light fw-light my-3">Contact Me</h1>
 				</div>
 			</div>
 			<div class="row my-4">
 				<div class="col-lg-12">
 					<form id="contact-form">
-						<div class="form-container container-fluid container-sm border border-2 border-dark rounded p-4">
+						<div class="form-container container-fluid container-sm rounded p-4">
 							<div class="row mb-3">
 								<div class="col">
-								<input type="text" class="form-control bg-transparent border-0 border-bottom rounded-0 text-light" placeholder="First name" id="user_fname">
+								<input type="text" class="form-control bg-transparent border-0 border-bottom rounded-0 text-light shadow-none" placeholder="First name" id="user_fname">
 								<span class="error-message"></span>
 								</div>
 								<div class="col">
-								<input type="text" class="form-control bg-transparent border-0 border-bottom rounded-0 text-light" placeholder="Last name" id="user_lname">
+								<input type="text" class="form-control bg-transparent border-0 border-bottom rounded-0 text-light shadow-none" placeholder="Last name" id="user_lname">
 								<span class="error-message"></span>
 								</div>
 							</div>
 							<div class="row mb-3">
 								<div class="col-8">
-								<input type="text" class="form-control bg-transparent border-0 border-bottom rounded-0 text-light" placeholder="Email" id="user_email">
+								<input type="text" class="form-control bg-transparent border-0 border-bottom rounded-0 text-light shadow-none" placeholder="Email" id="user_email">
 								<span class="error-message"></span>
 								</div>
 								<div class="col">
-								<input type="text" class="form-control bg-transparent border-0 border-bottom rounded-0 text-light" placeholder="Phone (xxx-xxx-xxxx)" id="user_phone">
+								<input type="text" class="form-control bg-transparent border-0 border-bottom rounded-0 text-light shadow-none" placeholder="Phone (xxx-xxx-xxxx)" id="user_phone">
 								<span class="error-message"></span>
 								</div>
 							</div>
 							<div class="row mb-3">
 								<div class="col">
-									<textarea class="form-control bg-transparent border-0 border-bottom rounded-0 text-light" placeholder="Message" id="user_message" rows="4"></textarea>
-									<span class="error-message"></span>
+									<textarea class="form-control bg-transparent border-0 border-bottom rounded-0 text-light shadow-none" placeholder="Message" id="user_message" rows="4"></textarea>
+									<span class="error-message m"></span>
 								</div>
 							</div>
-							<button type="submit" class = "btn btn-outline-success">Submit</button>
+							<button type="submit" class = "btn btn-outline-light">Submit</button>
 							<span class="success-message"></span>
 						</div>
 					</form>

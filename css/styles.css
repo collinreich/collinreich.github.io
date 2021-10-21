@@ -26,6 +26,16 @@ body {
   }
 }
 
+.btn-primary {
+  background-color: #1c3b51;
+  border: #1c3b51;
+}
+
+.btn-primary:hover {
+  background-color: #7291a8;
+  border: #7291a8;
+}
+
 .error-message {
   font-size: 0.85rem;
   color: red;
@@ -33,7 +43,7 @@ body {
 
 .success-message {
   margin-left: 15px;
-  color: green;
+  color: white;
 }
 
 #contact-container {
@@ -48,4 +58,10 @@ body {
 
 .form-control::-webkit-input-placeholder {
   color: white;
+}
+
+.card-image {
+  display: block;
+  height: 200px;
+  width: auto;
 }
