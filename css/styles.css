@@ -26,31 +26,6 @@ body {
   }
 }
 
-/* ===== index.html styles ===== */
-/* .home-wrapper {
-  background: linear-gradient(-45deg, #3fa9f5, #1c3b51, #7291a8, #c5e5fc);
-  background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
-  height: 100vh;
-} */
-
-/* ===== aboutMe.html styles ===== */
-/* .introduction-wrapper {
-  background-color: lightblue;
-  padding: 10px;
-}
-
-.interests-wrapper {
-  background-color: lightyellow;
-  padding: 10px;
-}
-
-.fact-wrapper {
-  background-color: lightgrey;
-  padding: 10px;
-} */
-
-/* ===== contactMe.html styles ===== */
 .error-message {
   font-size: 0.85rem;
   color: red;
@@ -68,5 +43,9 @@ body {
 }
 
 .form-container {
-  /* background-color: #13334a; */
+  background-color: #1c3b51;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: white;
 }
