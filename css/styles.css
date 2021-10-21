@@ -36,6 +36,16 @@ body {
   border: #7291a8;
 }
 
+.btn-outline-primary {
+  border-color: #1c3b51;
+  color: #1c3b51;
+}
+
+.btn-outline-primary:hover {
+  background-color: #1c3b51;
+  border: #1c3b51;
+}
+
 .error-message {
   font-size: 0.85rem;
   color: red;
