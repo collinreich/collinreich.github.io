@@ -79,6 +79,7 @@ class FormValidator{
             input.addEventListener('input', event => {
                 event.preventDefault()
                 self.defaultFields(input)
+                console.log("defaultOnInput")
             })
         })
     }

@@ -5,7 +5,6 @@ let resumeClickHandler = () => {
 
 //main driver function
 let main = () => {
-    $(".navbar-placeholder").load("navbar.html");
     let contactForm = document.getElementById("contact-form");
     let contactFields = ["user_fname", "user_lname", "user_email", "user_phone", "user_message"];
     document.getElementById("resume-visual").onclick = resumeClickHandler;
