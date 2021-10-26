@@ -8,7 +8,6 @@ let main = () => {
     let contactForm = document.getElementById("contact-form");
     let contactFields = ["user_fname", "user_lname", "user_email", "user_phone", "user_message"];
     document.getElementById("resume-visual").onclick = resumeClickHandler;
-    // contactForm.addEventListener("submit", validateFormOnSubmit);
     const validator = new FormValidator(contactForm, contactFields);
     validator.validateOnSubmit();
     validator.defaultOnInput();
