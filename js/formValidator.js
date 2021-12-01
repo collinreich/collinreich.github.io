@@ -14,9 +14,6 @@ class FormValidator{
     //add event listeners to each field to validate format, and send email if validated
     validateOnSubmit(){
         let self = this
-        console.log(self)
-        console.log(self.form)
-        console.log(self.fields)
         this.form.addEventListener('submit', event => {
             event.preventDefault()
             let isFormValidFlag = true

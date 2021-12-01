@@ -7,7 +7,7 @@ let resumeClickHandler = () => {
 let main = () => {
     let contactForm = document.getElementById("contact-form");
     let contactFields = ["user_fname", "user_lname", "user_email", "user_phone", "user_message"];
-    document.getElementById("resume-visual").onclick = resumeClickHandler;
+    // document.getElementById("resume-visual").onclick = resumeClickHandler;
     const validator = new FormValidator(contactForm, contactFields);
     validator.validateOnSubmit();
     validator.defaultOnInput();
@@ -15,6 +15,5 @@ let main = () => {
 
 //only call driver when the DOM is ready
 window.onload = () => {
-    console.log('WINDOW IS LOADED')
     main();
 }
